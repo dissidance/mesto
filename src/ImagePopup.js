@@ -1,4 +1,5 @@
-'use strict'
+import { Popup } from './Popup.js';
+import { popupImg} from './variables.js';
 //класс попапа с картинкой
 class ImagePopup extends Popup {
     constructor(popupSelector, openSelector) {
@@ -15,3 +16,5 @@ class ImagePopup extends Popup {
 
 //создание экземпляра класса
 const imagePopup = new ImagePopup('#popup-image');
+
+export { ImagePopup, imagePopup };

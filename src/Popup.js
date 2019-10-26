@@ -1,4 +1,6 @@
-'use strict'
+import { newCardForm, newCardName, newCardLink, editName,
+   editAbout,editProfileForm } from './variables.js';
+import { Validation, newCardValidation, editProfileValidation } from './Validation.js';
 //класс попапов
 class Popup {
     constructor(popupSelector, openSelector) {
@@ -37,3 +39,5 @@ class Popup {
 //создание экземпляра класса
 const newCardPopup = new Popup('#new-card', '.user-info__button');
 const editProfilePopup = new Popup('#edit-profile', '.user-info__edit-button');
+
+export { Popup, newCardPopup, editProfilePopup };

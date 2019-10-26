@@ -1,4 +1,6 @@
-'use strict'
+import { imagePopup } from './ImagePopup.js';
+import { api } from './Api.js';
+import { placesListContainer } from './variables.js';
 class Card {
   constructor(name, link, isLiked) {
     this.name = name;
@@ -48,7 +50,6 @@ class Card {
       const delButtonId = event.target.closest('.place-card').dataset.id;
       api.deleteCard(delButtonId)
         .then(res => {
-          console.log(res);
           placesListContainer.removeChild(event.target.closest('.place-card'))})
         .catch(err => console.log(err));
     } else {
@@ -88,3 +89,5 @@ class Card {
     return placeCard;
   }
 }
+
+export { Card };

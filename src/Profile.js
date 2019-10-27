@@ -1,3 +1,4 @@
+
 class Profile {
     constructor(name, about){
         this.name = name;
@@ -11,4 +12,6 @@ class Profile {
     }
 }
 
-profile = new Profile();
+const profile = new Profile();
+
+export { Profile, profile };

@@ -1,8 +1,12 @@
-'use strict'
+import { placesListContainer } from './variables.js';
+import { api } from './Api.js';
+import { Card } from './Card.js' 
 //класс контейнера с карточками
 class CardList {
     constructor(container) {
       this.container = container;
+      api.getProfileInfo();
+      api.getInitialCards();
     }
   //отрисовка карточек
     render(data) {
@@ -31,3 +35,5 @@ class CardList {
 }
 //создание экземпляра класса
 const cardList = new CardList(placesListContainer);
+
+export { CardList, cardList };

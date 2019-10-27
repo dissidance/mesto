@@ -1,4 +1,9 @@
-'use strict'
+import { submitCardButton, newCardForm, newCardName, newCardLink, editName,
+     editAbout,editProfileForm, saveButton, profileName, profileAbout } from './variables.js';
+import { api } from './Api';
+import { newCardPopup, editProfilePopup } from './Popup';
+import { cardList } from './CardList';
+
 class Validation {
     constructor(form) {
         this.form = form;
@@ -113,3 +118,5 @@ class Validation {
 //создание экземпляров класса 
 const newCardValidation = new Validation(newCardForm);
 const editProfileValidation = new Validation(editProfileForm);
+
+export { Validation, newCardValidation, editProfileValidation };

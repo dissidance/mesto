@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>"" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -27,7 +27,7 @@
     </div>
     <div class="popup" id='new-card'>
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form"  name="new">
           <div class="input-container">
@@ -44,7 +44,7 @@
     </div>
     <div class="popup" id='edit-profile'>
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close" id='edit-close'>
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close" id='edit-close'>
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" novalidate name="edit">
           <div class="input-container">
@@ -61,20 +61,11 @@
     </div>
     <div class="popup" id='popup-image'>
       <div class="popup__image-content">
-        <img src="./images/close.svg" alt="" class="popup__close" id='image-close'>
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close" id='image-close'>
         <img src ='' alt="" class="popup__card-image">
       </div>
     </div>
   </div>
-  <script src='./AutorizationKey.js'></script>
-  <script src='./config.js'></script>
-  <script src='./variables.js'></script>
-  <script src='./Profile.js'></script>
-  <script src='./CardList.js'></script>
-  <script src='./Popup.js'></script>
-  <script src='./ImagePopup.js'></script>
-  <script src='./Card.js'></script>
-  <script src='./Validation.js'></script>
-  <script src='./Api.js'></script>
+  <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>
